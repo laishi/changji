@@ -1,0 +1,38 @@
+
+    .parallaxDiv {
+      width:100%;
+      margin:0 auto;
+      position:relative;
+    }
+    .parallax {
+      display:block;
+      position:relative;
+      width:360px;
+      height:407px;
+      margin:-40px 0 0 0;
+      /*overflow:hidden;
+      padding:30px;*/
+      text-indent:-999px;
+      /*background:url(http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/7-10-full.png) center center no-repeat;*/
+      float:left;
+    }
+    .parallax:first-child {
+      /*background-image:url(http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/4-6-full.png);*/
+      width:100%;
+      height:361px;
+      margin:0 -160px 0 0;
+    }
+    .parallax .level {
+      display:block;
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      background-position:center center;
+      background-repeat:no-repeat;
+    } 
+    .parallax.enhanced,
+    .parallax.enhanced:first-child {
+      background:none;
+    }

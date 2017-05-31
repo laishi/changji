@@ -3,6 +3,25 @@
 
 $(document).ready(function() {
 
+
+
+
+	$(".slides animate")
+	.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+	 function(e){
+	    alert("end")
+	 });
+
+
+
+	console.log($(".slides animate"))
+
+
+
+
+
+
+
 	var spaceTime = 3000;
 	rotateSlider( spaceTime );
 
@@ -61,7 +80,7 @@ $(document).ready(function() {
 		}
 
 
-		console.log( getRotationDegrees($(".slides")) );
+		// console.log( getRotationDegrees($(".slides")) );
 
 	}, spaceTime);
 
