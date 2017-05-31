@@ -20,6 +20,8 @@ $(document).ready(function() {
     var rotateInterval = window.setInterval(function() {
 
 
+        console.log(getRotationDegrees($(".slides")));
+
         var slidesOneText = $(".slidesOne").children();
         if (getRotationDegrees($(".slides")) == 0) {
             TweenMax.set(slidesOneText, { display: "block" });
