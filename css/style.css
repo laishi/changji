@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #CDCDCD;
+    background-image: url(../img/bg/pattern.png);
 }
 
 a {
@@ -62,7 +63,7 @@ a:hover {
     width: 100%;
     height: 380px;
     background-color: #004882;
-    background-image: url(/home/laishi/Work/Dev/www/ad/tianjiang/img/bg/pattern.png);
+    background-image: url(../img/bg/pattern.png);
     overflow: hidden;
     -webkit-animation: fading 18s infinite;
     animation: fading 18s infinite;

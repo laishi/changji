@@ -134,18 +134,36 @@ $(document).ready(function() {
 
         } else {
 
-            TweenMax.to('.btnClose', 0.3, { x: -cx + dw, y: -cy + dh });
+            // TweenMax.to('.btnClose', 0.3, { x: -cx + dw, y: -cy + dh });
 
             $(this).addClass("gridMove");
 
-            TweenMax.to($(this), 0.6, { scale: 2, x: cx, y: cy });
+            TweenMax.to($(this), 0.6, { scale: 2, x: cx, y: cy, onComplete: showClose });
             TweenMax.to($(this).siblings(), 0.3, { scale: 0, opacity: 0 });
             TweenMax.to($(this).parents(".gridFx").siblings(), 0.3, { opacity: 0 });
             TweenMax.to($(".controls"), 0.3, { opacity: 0 });
             TweenMax.to($(".nav"), 0.3, { opacity: 1 });
             TweenMax.set($("body"), { backgroundColor: "#383838" });
 
+            console.log($(this).offset().left)
+            console.log($(this).offset().top)
+
+            var btnPosX = $(this).offset().left
+            var btnPosY = $(this).offset().top
+
+
+
+            TweenMax.to('.btnClose', 0.3, { left: btnPosX, top: btnPosY });
+
+
             lockScroll();
+
+            function showClose() {
+
+                console.log($(this))
+
+                // TweenMax.to('.btnClose', 0.3, { x: cx, y: cy });
+            }
 
         }
 
